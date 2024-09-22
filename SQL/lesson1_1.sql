@@ -1,2 +1,4 @@
-SELECT *
-FROM tables2;
+CREATE TABLE `abc`(
+    `ID` SERIAL PRIMARY KEY
+
+);
