@@ -1,5 +1,5 @@
 /*刪除資料表*/
-DROP TABLE IF EXISTS hospital;
+DROP TABLE IF EXISTS stations;
 
 /*醫療表*/
 /*序號,直轄市或省轄縣市,醫療機構名稱,市話,分機,聯絡人,地址*/
@@ -28,9 +28,10 @@ CREATE TABLE IF NOT EXISTS weather(
 	
 /*車站*/
 /*車站代號,車站中文名稱,車站英文名稱*/
-CREATE TABLE IF NOT EXISTS station(
-	id SETIAL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS stations(
+	id SERIAL PRIMARY KEY,
 	code VARCHAR(7) NOT NULL UNIQUE,
-	name VARCHAR(20) UNIQUE,
-	e_name VARCHAR(20) UNIQUE
-);
+	name VARCHAR(80) UNIQUE,
+	e_name VARCHAR(80) UNIQUE
+	);
+
