@@ -1,1 +1,3 @@
-jhjh
+CREATE
+DATABASE
+mydatabase_a18;
