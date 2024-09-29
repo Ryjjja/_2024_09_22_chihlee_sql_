@@ -25,3 +25,12 @@ CREATE TABLE IF NOT EXISTS weather(
 	status VARCHAR(20)  
     );
 
+	
+/*車站*/
+/*車站代號,車站中文名稱,車站英文名稱*/
+CREATE TABLE IF NOT EXISTS station(
+	id SETIAL PRIMARY KEY,
+	code VARCHAR(7) UNIQUE NOT NULL,
+	name VARCHAT(20) UNIQUE,
+	e_name VARCHAT(20) UNIQUE
+);
