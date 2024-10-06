@@ -16,3 +16,6 @@ ALTER TABLE stations
 ALTER COLUMN name 
 TYPE VARCHAR(10);
 
+
+
+
