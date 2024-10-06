@@ -41,8 +41,8 @@ WHERE name LIKE '小%';
 
 /*UPDATE SET WHERE*/
 UPDATE student
-SET major = '英語文學'
-WHERE major = '英語'
+SET major = '英語文學' /*要更新的值*/
+WHERE major = '英語'  /*原本的值*/
 RETURNING *
 
 UPDATE student
