@@ -1,3 +1,4 @@
+/*建立表格*/
 CREATE TABLE IF NOT EXISTS student(
 	student_id SERIAL,
 	name VARCHAR(20),
@@ -6,12 +7,14 @@ CREATE TABLE IF NOT EXISTS student(
 	PRIMARY KEY (student_id)
 );
 
+/*新增資料內容 方式一*/
 INSERT INTO student VALUES(1, '小白','英語',50);
 INSERT INTO student VALUES(2, '小黃','生物',90);
 INSERT INTO student VALUES(3, '小綠','歷史',70);
 INSERT INTO student VALUES(4, '小藍','英語',80);
 INSERT INTO student VALUES(5, '小黑','化學',20);
 
+/*新增資料內容 方式二*/
 INSERT INTO student
 VALUES (1, '小白','英語',50),
 	   (2, '小黃','生物',90),
@@ -20,8 +23,10 @@ VALUES (1, '小白','英語',50),
 	   (5, '小黑','化學',20)
 RETURNING *;
 
+
 SELECT *
 FROM student;
+
 
 DROP TABLE IF EXISTS student;  /*刪除整張資料表*/
 
@@ -32,3 +37,15 @@ WHERE name = '小白';
 
 DELETE FROM student
 WHERE name LIKE '小%';
+
+
+/*UPDATE SET WHERE*/
+UPDATE student
+SET major = '英語文學'
+WHERE major = '英語'
+RETURNING *
+
+UPDATE student
+SET  major = '生化'
+WHERE major = '生物' OR major = '化學'
+RETURNING *
