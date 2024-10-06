@@ -23,9 +23,9 @@ RETURNING *;
 SELECT *
 FROM student;
 
-DROP TABLE IF EXISTS student;
+DROP TABLE IF EXISTS student;  /*刪除整張資料表*/
 
-DELETE FROM student; /*資料全部刪除*/
+DELETE FROM student; /*資料內容全部刪除*/
 
 DELETE FROM student
 WHERE name = '小白';
