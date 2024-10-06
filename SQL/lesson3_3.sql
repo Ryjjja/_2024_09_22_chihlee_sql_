@@ -40,11 +40,3 @@ FROM stations
 WHERE id <= 20 AND id>= 10;
 
 
-
-
-
-
-
-
-
-
