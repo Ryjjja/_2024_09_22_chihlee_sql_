@@ -18,7 +18,7 @@ WHERE last_name ='Rodriquez' OR first_name = 'Adam';
 /* 取出first_name是Ann,Anne,Annie */
 SELECT first_name
 FROM customer
-WHERE first_name = 'Ann' OR first_name ='Anne' OR first_name ='Annie';
+WHERE first_name IN ('Ann', 'Anne', 'Annie');
 
 /* 取出字串開頭是Ann的first_name */
 SELECT first_name
