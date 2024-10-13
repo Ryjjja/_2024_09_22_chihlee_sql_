@@ -22,14 +22,13 @@ CREATE TABLE IF NOT EXISTS station_in_out(
 	staCode VARCHAR(5) NOT NULL,
 	gateInComingCnt INTEGER,
 	gateOutGoingCnt INTEGER,
-	PRIMARY KEY(date,staCode),
-	FOREIGN KEY(staCode) REFERENCES stations(stationCode) /*對應*/
+	PRIMARY KEY(date,staCode),  /*主鍵可設兩個*/
+	FOREIGN KEY(staCode) REFERENCES stations(stationCode) /*外鍵的對應*/
 	ON DELETE SET NULL
-	ON UPDATE CASCADE /*如果對應的資料被更新，把所有關聯的全部一起刪除*/
+	ON UPDATE CASCADE /*如果對應的資料被更新，把所有關聯的全部一起更新*/
 );
 
-
-/*ON DELETE CASCADE _如果對應的資料被刪除，把所有關聯的全部一起更新*/
+/*ON DELETE CASCADE _如果對應的資料被刪除，把所有關聯的全部一起刪除*/
 
 SELECT *
 FROM station_in_out;
