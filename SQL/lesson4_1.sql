@@ -37,6 +37,6 @@ SELECT s.student_id AS 學生編號,
 		        age AS AGE,
 		course_name AS 課程名稱,
 		      grade AS 成積
-FROM enrollments e join students s
-				 on e.student_id = s.student_id
+FROM enrollments e join students s   /*將enrollments稱為e ; 將students稱為s*/
+				 on e.student_id = s.student_id  /*利用JOIN ON將兩表格的student_id作關聯*/
 WHERE name='張小明';
