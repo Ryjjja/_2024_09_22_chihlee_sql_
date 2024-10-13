@@ -1,6 +1,7 @@
 /*GROUP BY*/
 
-SELECT * FROM public.payment
+SELECT * 
+FROM public.payment
 ORDER BY payment_id ASC;
 
 SELECT customer_id,
