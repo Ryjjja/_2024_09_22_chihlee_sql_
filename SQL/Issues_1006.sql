@@ -23,16 +23,16 @@ WHERE first_name IN ('Ann', 'Anne', 'Annie');
 /* 取出字串開頭是Ann的first_name */
 SELECT *
 FROM customer
-WHERE first_name like 'Ann%';
+WHERE first_name LIKE 'Ann%';
 
 /* 取出first_name第1個字元是A,同時first_name的字元長度是3到5的資料 */
 SELECT *
 FROM customer
-WHERE first_name like 'A%' AND LENGTH(first_name) BETWEEN 3 AND 5;
+WHERE first_name LIKE 'A%' AND LENGTH(first_name) BETWEEN 3 AND 5;
 
 
 /* 取出first_name,前3字為Bra,但last_name不是Motley */
 SELECT *
 FROM customer
-WHERE first_name like 'Bra%' AND last_name <> 'Motley';
+WHERE first_name LIKE 'Bra%' AND last_name <> 'Motley';
 
