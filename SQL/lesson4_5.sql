@@ -1,5 +1,5 @@
 /*HAVING用法*/
-/*在GROUP BY之後要再搜尋，用HAVING*/
+/*對GROUP BY之後結果再進行篩選時，用HAVING*/
 SELECT *
 FROM payment;
 

@@ -9,7 +9,8 @@ CREATE TABLE student(
 SELECT *
 FROM student;
 
-/*新增資料*/
+/*INSERT INTO新增資料*/
+
 INSERT INTO student(name,major)
 VALUES('小白','歷史');
 
