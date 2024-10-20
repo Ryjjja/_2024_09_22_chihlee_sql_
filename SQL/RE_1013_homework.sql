@@ -33,8 +33,7 @@ SELECT	EXTRACT(MONTH FROM date) AS 月份,
 FROM station_in_out in_out JOIN stations s
 							ON in_out.stacode = s.stationcode
 WHERE EXTRACT(YEAR FROM date) = 2020 AND stationname = '基隆'
-GROUP BY stationname,EXTRACT(MONTH FROM date)
-ORDER BY 月份;
+GROUP BY stationname, EXTRACT(MONTH FROM date);
 
 
 /*基隆火車站2020年,每月份進站人數,由多至少*/
