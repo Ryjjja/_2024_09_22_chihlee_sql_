@@ -11,7 +11,7 @@ FROM stations s JOIN station_in_out in_out
 				ON in_out.stacode = s.stationcode /*欄位名不同，可以不指定資料表，可省略.之前的資料表名稱*/
 /*WHERE date BETWEEN '2022-01-01' AND '2022-12-31'  /*BETWEEN寫法*/ */
 WHERE EXTRACT(YEAR FROM date) = 2022
-GROUP BY stationname  /*GROUP BY語法，是把相同的值整合成一個*/ /*整合後筆數不同，要用聚合函數處理，例如:SUM加總*/
+GROUP BY stationname  /*GROUP BY語法，是把相同的值整合成一個，整合後筆數不同，要用聚合函數處理，例如:SUM加總*/
 ORDER BY 進站總人數 DESC; /*排序 預設由小到大ASC; 由大到小用DESC*/
 
 
@@ -22,7 +22,7 @@ FROM stations s JOIN station_in_out in_out
 							ON in_out.stacode = s.stationcode
 WHERE EXTRACT(YEAR FROM date) = 2022
 GROUP BY stationname
-HAVING SUM(gateincomingcnt) > 5000000 /*GROUP BY完，用HAVINGN*/
+HAVING SUM(gateincomingcnt) > 5000000 /*GROUP BY完成後，用HAVING*/
 ORDER BY 進站總人數 DESC;
 
 
