@@ -18,11 +18,11 @@ ORDER BY 進站總人數 DESC; /*排序 預設由小到大ASC; 由大到小用DE
 /*全省各站點2022年進站總人數大於5佰萬人的站點*/
 SELECT stationname AS 站名,
 		SUM(gateincomingcnt) AS 進站總人數
-FROM station_in_out in_out JOIN stations s
+FROM stations s JOIN station_in_out in_out
 							ON in_out.stacode = s.stationcode
 WHERE EXTRACT(YEAR FROM date) = 2022
 GROUP BY stationname
-HAVING SUM(gateincomingcnt) > 5000000
+HAVING SUM(gateincomingcnt) > 5000000 /*GROUP BY完，用HAVINGN*/
 ORDER BY 進站總人數 DESC;
 
 /*基隆火車站2020年,每月份進站人數*/
