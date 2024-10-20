@@ -2,7 +2,7 @@
 SELECT stationname AS 站名,
 	   SUM(gateincomingcnt) AS 進站總人數
 FROM station_in_out in_out JOIN stations s
-					       ON in_out.staCode = s.stationcode
+					       ON in_out.stacode = s.stationcode
 WHERE EXTRACT(YEAR FROM date) = 2022
 GROUP BY stationname
 ORDER BY 進站總人數 DESC;
