@@ -1,10 +1,12 @@
 /*1013作業檢討*/
 
+/*先查詢表格資料*/
 SELECT *
 FROM stations;
 
 SELECT *
 FROM station_in_out;
+
 /*全省各站點2022年進站總人數*/
 SELECT stationname as 站名
 FROM stations JOIN station_in_out ON stationcode = stacode
