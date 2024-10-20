@@ -25,6 +25,7 @@ GROUP BY stationname
 HAVING SUM(gateincomingcnt) > 5000000 /*GROUP BY完，用HAVINGN*/
 ORDER BY 進站總人數 DESC;
 
+
 /*基隆火車站2020年,每月份進站人數*/
 SELECT	EXTRACT(MONTH FROM date) AS 月份,
 		stationname AS 站名,
@@ -34,6 +35,7 @@ FROM station_in_out in_out JOIN stations s
 WHERE EXTRACT(YEAR FROM date) = 2020 AND stationname = '基隆'
 GROUP BY stationname,EXTRACT(MONTH FROM date)
 ORDER BY 月份;
+
 
 /*基隆火車站2020年,每月份進站人數,由多至少*/
 SELECT stationname AS 站名,
@@ -45,6 +47,7 @@ WHERE EXTRACT(YEAR FROM date) = 2020 AND stationname = '基隆'
 GROUP BY stationname,EXTRACT(MONTH FROM date)
 ORDER BY 進站人數 DESC;
 
+
 /*基隆火車站2020,2021,2022,每年進站人數*/
 SELECT stationname AS 站名,
 		EXTRACT(YEAR FROM date) AS 年份,
@@ -54,6 +57,7 @@ FROM station_in_out in_out JOIN stations s
 WHERE EXTRACT(YEAR FROM date) BETWEEN 2020 AND 2022 AND stationname = '基隆'
 GROUP BY stationname, EXTRACT(YEAR FROM date)
 ORDER BY 年份;
+
 
 /*基隆火車站,臺北火車站2020,2021,2022,每年進站人數*/
 SELECT stationname AS 站名,
