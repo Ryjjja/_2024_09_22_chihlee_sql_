@@ -26,6 +26,4 @@ with st.sidebar:
 
 
 
-
-
 ## 執行時，先進入chihlee_sql的虛擬環境 / lesson7的整合終端機 / 輸入 streamlit run lesson7_4.py
