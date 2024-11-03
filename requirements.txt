@@ -1,3 +1,4 @@
+##安裝的套件
 psycopg2-binary
 streamlit
 pandas
