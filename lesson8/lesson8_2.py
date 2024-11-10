@@ -7,7 +7,7 @@ load_dotenv()
 
 
 
-@st.cache_resource
+@st.cache_data
 def getData(country:tuple[str])->list[tuple]:
     conn = psycopg2.connect(host=os.environ['HOST'],
                             database=os.environ['DATABASE'],
