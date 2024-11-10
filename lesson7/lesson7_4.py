@@ -5,7 +5,10 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-conn = psycopg2.connect(host=os.environ['HOST'],database=os.environ['DATABASE'],user=os.environ['USER'],password=os.environ['PASSWORD'])
+conn = psycopg2.connect(host=os.environ['HOST'],
+                        database=os.environ['DATABASE'],
+                        user=os.environ['USER'],
+                        password=os.environ['PASSWORD'])
 with conn:
     with conn.cursor() as cursor:
         sql = '''
