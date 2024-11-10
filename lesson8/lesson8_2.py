@@ -15,10 +15,18 @@ with conn:
         all_country = cursor.fetchall()
 conn.close()
 
+def user_select():
+    print('使用者選擇了') #定義funtion
+    print(options)
 
 st.title('世界大盤分析')
 with st.sidebar:
     st.sidebar.title('請選擇股票市場:')
     input_dict= dict(all_country)
-    options= st.multiselect("請選擇",input_dict.values(),default='台灣',placeholder='請選擇市場',label_visibility='hidden')
+    options= st.multiselect("請選擇",input_dict.values(),
+                            default='台灣',
+                            placeholder='請選擇市場',
+                            label_visibility='hidden',
+                            on_change=user_select) #funtions名稱
+    print(type(options))
     st.write(options)
